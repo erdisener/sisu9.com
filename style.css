@@ -353,24 +353,63 @@ header #menu-bar {
     background: #fff;
     width: fit-content;
     height: fit-content;
+    cursor: pointer;
 }
+
 .references .logo-container .logo-box .logo-frame {
     display: flex;
-    align-items: center;
+    align-items:flex-end;
     justify-content: center;
+    overflow: hidden;
+    cursor: pointer;
+    position:relative;
     width: 200px;
     height: 120px;
     box-shadow: 0 1rem 2rem rgba(0,0,0,.2);
 }
-.references .logo-container .logo-box .logo-frame h6 {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: rgb(105, 105, 105);
-    line-height: 1.25;
-    margin: 1rem 0;
+.references .logo-container .logo-box .logo-frame img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: .7rem;
+    padding: 1rem 1rem;
+    -webkit-filter: grayscale(1) invert(1);
+   filter: grayscale(1) invert(1);
 }
-.references .logo-container .logo-box .logo-frame:hover {
-    transform: scale(1.1);
+.references .logo-container .logo-box .logo-frame:hover img {
+    -webkit-filter: grayscale(0) invert(0);
+   filter: grayscale(0) invert(0);
+}
+
+.references .logo-container .logo-box .logo-frame h6 {
+    position: absolute;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    opacity: 0;
+}
+.references .logo-container .logo-box .logo-frame:hover h6{
+    display:flex;
+    justify-content: center; 
+    opacity: 1;
+    transition-delay: .2s;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+.references .logo-container .logo-box .logo-frame::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0,0,0,.4);
+    transition: .2s linear;
+}
+.references .logo-container .logo-box .logo-frame:hover::before{
+    top:0
 }
 .references .content-box {
     flex: 1;
