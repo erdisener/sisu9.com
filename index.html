@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width_device-width, initial-scale=1.0">
+        <title>sisu9</title>
+        <!-- aos css -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.css">
+        <!-- google font -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <!-- my style css -->
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="opening-logo">
+            <h2>S9</h2>
+        </div>
+        <div class="opening-container">
+            <div class="opening-top">
+                <h3>Yazılım</h3>
+            </div>
+            <div class="opening-bottom">
+                <h3>Tasarım</h3>
+            </div>
+        </div>
+
+        <!-- aos js -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.0.2/aos.js"></script>
+        <!-- jquery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <!-- my main js -->
+        <script src="./main.js"></script>
+        <!-- initializing aos -->
+        <script>
+            AOS.init({
+                delay: 400,
+                duration: 1000
+            })
+
+            window.setTimeout(function() {
+                window.location.href = 'home.html';
+            }, 8000);
+      
+        </script>
+    </body>
+</html>
