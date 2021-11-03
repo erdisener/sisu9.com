@@ -1,6 +1,6 @@
 :root {
-    --blue: #3d91db;
-    --yellow: #f7ca3e;
+  --blue: #3d91db;
+  --yellow: #f7ca3e;
 }
 * {
     font-family: 'Segoe Ui','Roboto', sans-serif;
