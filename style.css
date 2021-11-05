@@ -67,7 +67,6 @@ section {
 header {
     position: fixed;
     background: white;
-    z-index: 999;
     top: 0; 
     bottom: 0;
     left: 0;
@@ -114,6 +113,7 @@ header .navbar ul li {
     transform: rotate(-90deg);
     margin-bottom: 6rem;
 }
+
 header .navbar ul li a {
     font-size: 1.55rem;
     font-weight: 600;
@@ -662,7 +662,52 @@ header #menu-bar {
     font-weight: 500;
 }
 
+/* Scroll Up Button */
 
+.scrollToTopBtn {
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 4rem;
+    background-color: unset;
+  
+    /* place it at the bottom right corner */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    /* keep it at the top of everything else */
+    z-index: 1000;
+    /* hide with opacity */
+    opacity: 0;
+    /* also add a translate effect */
+    transform: translateY(100px);
+    /* and a transition */
+    transition: all 0.5s ease;
+  }
+  
+  .showBtn {
+    opacity: 0.7;
+    transform: translateY(0);
+  }
+
+  .up {
+      color: #333;
+      opacity: 0.5;
+      font-size: 1.9rem;
+      visibility: hidden;
+      transition: all 0 ease-in-out;
+      text-transform: none;
+  }
+
+  .showBtn:hover {
+    opacity: 0.9;
+  }
+
+  .showBtn:hover .up{
+    visibility: visible;
+  }
+
+/* Scroll Up Button end */
 
 
 
@@ -716,6 +761,10 @@ header #menu-bar {
         display: block;
     }
 
+    /* header #menu-bar .fa-times{
+        display: block;
+    } */
+
     section {
         min-height: 80vh;
         margin-left: 6rem;
@@ -728,23 +777,31 @@ header #menu-bar {
 
     header .navbar {
         position: fixed;
-        top: 8rem;
-        left: 0;
-        width: 100%;
-        background: var(--yellow);
+        top: 5rem;
+        left: 5rem;
+        width: 50%;
+        height: 50%;
+        background: var(--blue);
         border-top: .2rem solid rgba(0,0,0,.1);
         transform: scaleY(0);
         transform-origin: top;
         opacity: 0;
     }
+
+
+
+
     header .navbar ul {
         flex-flow: column;
         padding: 2rem;
+        justify-content:unset;
+        
     }
     header .navbar ul li {
         margin: 1.5rem;
         width: 100%;
         text-align: center;
+        transform: rotate(0deg);
     }
     header .navbar ul li a {
         display: block;
@@ -755,9 +812,12 @@ header #menu-bar {
     header .navbar ul li a.active {
         color: #333;
         border-color: #333;
+        border:none;
     }
     .fa-times {
-        transform: rotate(90deg);
+        position: relative;
+        transform: rotate(0deg);
+        z-index: 9999;
     }
     header .navbar.nav-toggle {
         transform: scaleY(1);
@@ -777,7 +837,18 @@ header #menu-bar {
        /* padding: 2rem 4rem 0rem 4rem; */
    }
 
-   
+   .references
+    {
+      flex-direction: column-reverse; 
+      padding: 0rem 1rem;
+    }
+
+
+
+    .references .content-box .heading-frame {
+        width: 100%;
+        padding: 5rem 1.5rem 2rem;
+    }
    
     .order .row {
         height: 70vh;
@@ -803,10 +874,16 @@ header #menu-bar {
         padding: 1rem 5%;
         margin-right: 0;
     }
+
+
+
     header .navbar ul li {
         transform: rotate(0deg);
-        margin-bottom: 6rem;
+        margin: 1.5rem;
+        justify-content:unset;
     }
+
+
     .home {
         margin-top: 0;
     }
@@ -832,6 +909,30 @@ header #menu-bar {
 
    .menu .row .content {
     padding: 2rem 6rem;
+}
+.references .logo-container .logo-box {
+    margin-bottom: 4rem;
+}
+.references .logo-container .logo-box {
+    grid-gap: 2rem;
+}
+
+.references .logo-container .logo-box .logo-frame {
+   
+    width: 150px;
+    height: 90px;
+    
+}
+
+
+.references .content-box
+{
+  margin-bottom: 2rem;
+}
+
+.references .content-box .heading-frame {
+
+    padding: 3rem 1.5rem 1rem;
 }
 
 
@@ -866,4 +967,16 @@ header #menu-bar {
     font-size: 1.5rem;
     
 }
+
+.references .logo-container .logo-box {
+    grid-gap: 1rem;
+}
+
+.references .logo-container .logo-box .logo-frame {
+   
+    width: 100px;
+    height: 75px;
+    
+}
+
 }
