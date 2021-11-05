@@ -837,6 +837,10 @@ header #menu-bar {
        /* padding: 2rem 4rem 0rem 4rem; */
    }
 
+   .menu .row {
+    flex-wrap: wrap-reverse;
+}
+
    .references
     {
       flex-direction: column-reverse; 
