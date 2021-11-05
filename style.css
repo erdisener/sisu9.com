@@ -21,9 +21,11 @@ h1, h3, h2, h4, h5, h6 {
 html {
     font-size: 62.5%;
     overflow-x: hidden;
+    /* overflow-y: hidden; */
 }
 body {
     overflow-x: hidden;
+    overflow-y: hidden;
     /*height: 200rem;*/
 }
 html::-webkit-scrollbar {
@@ -124,7 +126,7 @@ header .navbar ul li a.active {
 }
 header #menu-bar {
     font-size: 3rem;
-    color: #666;
+    color: #fff;
     cursor: pointer;
     display: none;
 }
@@ -694,11 +696,18 @@ header #menu-bar {
         font-size: 55%;
     }
 
+    .home {
+        position:unset;
+    
+    }
+
     .home::before,
     .home::after {
         display: none;
     }
 }
+
+
 @media (max-width:768px) {
     html {
         font-size: 55%;
@@ -706,6 +715,17 @@ header #menu-bar {
     header #menu-bar {
         display: block;
     }
+
+    section {
+        min-height: 80vh;
+        margin-left: 6rem;
+    }
+
+    header {
+        width: 40px;
+        opacity: 0.7;
+    }
+
     header .navbar {
         position: fixed;
         top: 8rem;
@@ -744,12 +764,20 @@ header #menu-bar {
         opacity: 1;
     }
     .home .content {
-        text-align: center;
-        padding: 2rem 0;
+        padding-left: 0rem;
     }
+
     .home .content h3 {
         font-size: 4.5rem;
     }
+
+    .company .image
+    {
+       flex: auto;
+       /* padding: 2rem 4rem 0rem 4rem; */
+   }
+
+   
    
     .order .row {
         height: 70vh;
@@ -758,6 +786,13 @@ header #menu-bar {
         display: none;
     }
 }
+
+@media (max-width:660px) {
+    section {
+        min-height: 60vh;
+    }
+}
+
 @media (max-width:500px) {
     html {
         font-size: 50%;
@@ -773,8 +808,33 @@ header #menu-bar {
         margin-bottom: 6rem;
     }
     .home {
-        margin-top: 80px;
+        margin-top: 0;
     }
+
+    .home .content h6 {
+        display: flex;
+    }
+
+    .menu {
+        padding:4rem 0rem;
+    }
+
+   
+    .company .image img
+    {
+       height: 50vh;
+   }
+
+   .menu .row .image {
+       padding: 2rem 1rem 1rem 1rem;
+       margin-left:0rem;
+   }
+
+   .menu .row .content {
+    padding: 2rem 6rem;
+}
+
+
     .order .row {
         height: 67vh;
     }
@@ -783,4 +843,27 @@ header #menu-bar {
     .footer .box-container .box p {
         text-align: center;
     }
+}
+
+@media (max-width:419px) {
+ .home {
+     padding-left:1rem;
+
+ }
+
+ .home .content {
+    padding: 0;
+    padding-bottom: inherit;
+    
+}
+
+ .home .content h5 {
+    font-size: 3rem;
+    
+}
+
+ .home .content h6 {
+    font-size: 1.5rem;
+    
+}
 }
