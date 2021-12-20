@@ -372,6 +372,7 @@ header #menu-bar {
     color: #666;
     padding: 1rem 0;
     line-height: 1.4;
+    text-align: justify;
 }
 .menu .content .btn {
     padding: 1.3rem 5.5rem;
@@ -382,6 +383,62 @@ header #menu-bar {
     text-align: center;
     text-transform: uppercase;
 }
+
+/*info*/
+
+.info .tools {
+    display: flex;
+    flex-direction: column;
+    margin-top: 7rem;
+}
+.info .tools h3 {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-transform:none;
+}
+.info .tools .box-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    
+}
+.info .tools .box-container .box {
+    background: #fff;
+    width: 10rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    /* box-shadow: 0 .3rem .5rem rgba(0,0,0,.2); */
+    text-align: center;
+}
+.info .tools .box-container .box img {
+    height: 6rem;
+    width: 100%;
+    object-fit: contain;
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+}
+.info .tools .box-container .box:hover img {
+    -webkit-filter: grayscale(0) invert(0);
+    filter: grayscale(0) invert(0);
+}
+
+.info .tools .box-container .box h3 {
+    color: #333;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-transform:none;
+}
+
+
+.infov .tools .box-container .box:hover {
+    transform: scale(1.02);
+    box-shadow: 0 1rem 1rem rgba(0,0,0,.2);
+}
+/*info-end*/
 /* references */ 
 .references {
     display: flex;
