@@ -97,6 +97,8 @@ header:hover {
     0 10px 10px rgba(0,0,0,.2),
     0 20px 20px rgba(0,0,0,.15);
 }
+
+
 .logo-en {
     font-size: 2rem;
     font-weight: 400;
@@ -255,7 +257,7 @@ header #menu-bar {
     color: #333;
     line-height: 1.25;
     /* margin-bottom: 2rem; */
-    text-align: justify;
+  /*   text-align: justify; */
 }
 
 .company .content blockquote {
@@ -274,7 +276,7 @@ header #menu-bar {
     color: #666;
     padding: 1rem 0;
     line-height: 1.4;
-    text-align: justify;
+    /* text-align: justify; */
 }
 .company .content span {
     
@@ -372,7 +374,7 @@ header #menu-bar {
     color: #666;
     padding: 1rem 0;
     line-height: 1.4;
-    text-align: justify;
+   /*  text-align: justify; */
 }
 .menu .content .btn {
     padding: 1.3rem 5.5rem;
